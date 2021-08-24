@@ -20,10 +20,9 @@ void render(){
 
 void update(){
   acc = new PVector(540 - location.x, 540 - location.y);
-  //Create new vector in acceleration that has mouse x minus current posiiton
+
   acc.limit(.5);
   //Best is .5
-  //Limit the magnitude of the vector to .5, provavly to prevent travveling in straight line to mouse?
   velocity.add(acc);
   //Add acc to the veloicty
   velocity.limit(10);
